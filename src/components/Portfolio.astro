@@ -1,0 +1,175 @@
+---
+// Portfolio Section
+// Showcases investments with placeholder for future companies
+---
+
+<section id="portfolio" class="section-padding bg-[var(--bg-primary)] relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-accent-500/5 to-primary-500/5 rounded-full blur-3xl"></div>
+
+  <div class="container-custom relative">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-accent-500/10 text-accent-500 text-sm font-medium mb-4">
+        Portfolio
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        Companies We Back
+      </h2>
+      <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        We partner with visionary founders building the next generation of transformative companies
+        in security, networking, and AI.
+      </p>
+    </div>
+
+    <!-- Portfolio Status -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Coming Soon Card -->
+      <div class="portfolio-coming-soon">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <!-- Visual -->
+          <div class="flex-shrink-0">
+            <div class="relative">
+              <div class="w-32 h-32 rounded-3xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center animate-float">
+                  <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+              </div>
+              <!-- Decorative elements -->
+              <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent-400 animate-pulse-glow"></div>
+              <div class="absolute -bottom-1 -left-1 w-4 h-4 rounded-full bg-primary-400 animate-pulse-glow" style="animation-delay: 1s;"></div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="text-center lg:text-left flex-1">
+            <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
+              Actively Investing
+            </h3>
+            <p class="text-[var(--text-secondary)] mb-6 max-w-lg">
+              We're actively seeking exceptional founders building transformative companies.
+              If you're working on something innovative in cybersecurity, networking, or AI,
+              we'd love to hear from you.
+            </p>
+
+            <!-- What we're looking for -->
+            <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
+              <span class="portfolio-tag">
+                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                Cybersecurity
+              </span>
+              <span class="portfolio-tag">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                Networking
+              </span>
+              <span class="portfolio-tag">
+                <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                AI / ML
+              </span>
+            </div>
+
+            <a href="#contact" class="btn btn-accent">
+              Pitch Your Startup
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process Timeline -->
+      <div class="mt-16">
+        <h3 class="text-xl font-semibold text-[var(--text-primary)] text-center mb-10">Our Investment Process</h3>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h4 class="font-semibold text-[var(--text-primary)] mb-2">Initial Review</h4>
+            <p class="text-sm text-[var(--text-tertiary)]">We review every pitch and respond within 48 hours</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h4 class="font-semibold text-[var(--text-primary)] mb-2">Discovery Call</h4>
+            <p class="text-sm text-[var(--text-tertiary)]">30-minute conversation to learn about your vision</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h4 class="font-semibold text-[var(--text-primary)] mb-2">Deep Dive</h4>
+            <p class="text-sm text-[var(--text-tertiary)]">Technical review and market analysis</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h4 class="font-semibold text-[var(--text-primary)] mb-2">Partnership</h4>
+            <p class="text-sm text-[var(--text-tertiary)]">Term sheet and ongoing support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-coming-soon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  .portfolio-coming-soon:hover {
+    border-color: var(--color-accent-400);
+    box-shadow: 0 0 40px -10px var(--color-accent-400);
+  }
+
+  .portfolio-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+  }
+
+  .portfolio-tag:hover {
+    border-color: var(--color-accent-400);
+  }
+
+  .process-step {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .process-step:hover {
+    border-color: var(--color-accent-400);
+    transform: translateY(-2px);
+  }
+
+  .process-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 auto 1rem;
+  }
+</style>
