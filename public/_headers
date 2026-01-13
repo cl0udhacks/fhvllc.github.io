@@ -1,0 +1,24 @@
+/*
+  # Security Headers for Fairy Hill Ventures
+
+  # Prevent clickjacking attacks
+  X-Frame-Options: DENY
+
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Referrer policy - send origin for same-origin, nothing for cross-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Permissions policy - disable unnecessary browser features
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://formspree.io; upgrade-insecure-requests
+
+  # Strict Transport Security - enforce HTTPS
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Cross-Origin policies
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin

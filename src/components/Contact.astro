@@ -31,6 +31,12 @@
           <p class="text-[var(--text-secondary)] mb-8">Fill out the form below and we'll get back to you within 48 hours.</p>
 
           <form action="https://formspree.io/f/mdoqayab" method="POST" class="space-y-6">
+            <!-- Honeypot field for bot detection (hidden from users) -->
+            <div class="absolute -left-[9999px]" aria-hidden="true">
+              <label for="_gotcha">Don't fill this out if you're human</label>
+              <input type="text" name="_gotcha" id="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-medium text-[var(--text-primary)] mb-2">
@@ -41,6 +47,9 @@
                   id="name"
                   name="name"
                   required
+                  minlength="2"
+                  maxlength="100"
+                  autocomplete="name"
                   class="form-input"
                   placeholder="John Smith"
                 />
@@ -54,6 +63,8 @@
                   id="email"
                   name="email"
                   required
+                  maxlength="254"
+                  autocomplete="email"
                   class="form-input"
                   placeholder="john@company.com"
                 />
@@ -69,6 +80,8 @@
                   type="text"
                   id="company"
                   name="company"
+                  maxlength="100"
+                  autocomplete="organization"
                   class="form-input"
                   placeholder="Your Company"
                 />
@@ -96,6 +109,8 @@
                 name="message"
                 rows="5"
                 required
+                minlength="10"
+                maxlength="5000"
                 class="form-input resize-none"
                 placeholder="Tell us about your startup, your vision, and what stage you're at..."
               ></textarea>
@@ -202,7 +217,12 @@
 </section>
 
 <!-- Cloudflare Turnstile Script -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+  referrerpolicy="strict-origin-when-cross-origin"
+></script>
 
 <style>
   .form-input {

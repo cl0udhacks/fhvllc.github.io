@@ -1,0 +1,8 @@
+# Robots.txt for Fairy Hill Ventures
+# https://www.fairyhillventures.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.fairyhillventures.com/sitemap-index.xml

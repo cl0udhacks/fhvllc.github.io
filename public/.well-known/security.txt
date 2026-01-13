@@ -1,0 +1,7 @@
+# Security Policy for Fairy Hill Ventures
+# https://securitytxt.org/
+
+Contact: mailto:info@fairyhillventures.com
+Preferred-Languages: en
+Canonical: https://www.fairyhillventures.com/.well-known/security.txt
+Expires: 2027-01-01T00:00:00.000Z
